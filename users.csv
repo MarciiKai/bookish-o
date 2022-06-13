@@ -1,19 +1,1 @@
-<?php
 
-
-      $data = ['name','email',];
-      $file= 'form.csv';
-      $f = fopen($file,'w');
-
-       if ($f==false) {
-          die('Error opening the file');
-        
-       }
-      foreach ($data as $row ){
-          fputcsv($f, array($row));
-      }
-
-      fclose($f);
- 
-
-?>
