@@ -1,16 +1,13 @@
 <?php
 
-function logout(){
-   
-if (is_user_logged_in()) {
-    
-        unset($_SESSION['username'], $_SESSION['user_id']);
-        session_destroy();
-        redirect_to('login.php');
-       }
+    session_start();
+    unset($_SESSION['username']);
+    session_destroy();
+   header("Location: ../forms/login.html");
+
+exit;
 
 
     }
 
-echo "You are logged out!!";
 ?>
